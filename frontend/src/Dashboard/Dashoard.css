@@ -1,0 +1,142 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dashboard{
+  font-size: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+.the-grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 20px;
+  height: 100px;
+  width: 100%;
+  background-color: #f9f9f9;
+  position: fixed;
+  margin-top: 100px;
+  z-index: 50;
+}
+
+.logout{
+  width: 80%;
+  height: 40px;
+  background-color: rgb(67, 9, 9);
+  color: #f9f9f9;
+  margin-left: 10%;
+  border: 1px solid rgb(67, 9, 9);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.register{
+  width: 80%;
+  height: 40px;
+  background-color: #007bff;
+  color: #f9f9f9;
+  text-align: center;
+  border: 1px solid #007bff;
+  margin-right: 10%;
+  margin-top: 30px;
+}
+
+.admin{
+  height: 100px;
+  width: 100%;
+  background-color: rgba(250, 235, 215, 0.155);
+  border: 1px solid rgba(250, 235, 215, 0.155);
+  /* text-align: center; */
+  color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  /* margin-top: -100px; */
+}
+
+.searchh{
+  width: 80%;
+  height: 40px;
+  padding-left: 8px;
+  border-radius: 20px;
+}
+
+.right-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+}
+
+
+.patient-table th, .patient-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.patient-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.patient-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.patient-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.see, .seee{
+  color: #f9f9f9;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+}
+
+.seee{
+  background-color: navy;
+  border: navy;
+}
+
+.btn-show{
+  position: absolute;
+  right: 2%;
+  bottom: 4%;
+}
+
+.cont-list{
+  text-align: center;
+  margin-top: 210px;
+  margin-bottom: 10px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+}
+
+.record-link{
+  text-decoration: none;
+  color: #121212;
+}
+

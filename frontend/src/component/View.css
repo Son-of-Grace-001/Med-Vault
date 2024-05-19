@@ -1,0 +1,67 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.view {
+  height: 40px;
+  background-color: green;
+  color: #f9f9f9;
+  border: none;
+  width: 100px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.names{
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.add{
+  width:60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: blue;
+  border:none;
+  position: absolute;
+  right: 12px;
+  bottom:12px;
+}
+
+.close{
+  background-color: red;
+  border:none;
+  width:100px;
+  height:40px;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+.plus, .times{
+  color:#f9f9f9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

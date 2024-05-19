@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.recordss{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.read-detail {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width:40%;
+  /* margin:auto; */
+  height:300px;
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+  justify-content:space-between;
+  margin-top: 150px;
+}
+
+.read-detail p {
+  margin: 5px 0;
+}

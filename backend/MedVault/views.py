@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate
 from django.core.validators import validate_email
 User = get_user_model()
 from . models import Patient, Record, Patient, OTPVerification
-from .serializers import PatientSerializer, RecordSerializer
+from .serializers import PatientSerializer, RecordSerializer, NewRecordSerializer
 from django.core.mail import send_mail
 from django.conf import settings
 from rest_framework.generics import get_object_or_404
@@ -14,6 +14,7 @@ from django.http import JsonResponse
 from rest_framework.exceptions import ValidationError
 import random
 import logging
+from rest_framework import permissions
 
 
 
@@ -212,12 +213,15 @@ class VerifyOtpView(APIView):
         except OTPVerification.DoesNotExist:
             return Response({"error": "Invalid OTP"}, status=status.HTTP_400_BAD_REQUEST)
 
-        
-    
-    
-   
-        
-        
 
-
-
+        
+class UpdateRecordView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = NewRecordSerializer
+    def post(self, request, id):
+        user = request.user
+        patient= get_object_or_404(Patient, pk= id)
+        serializer = self.serializer_class(data= request.data)
+        serializer.is_valid(raise_exception = True)
+        serializer.save(patient=patient)
+        return Response(data = serializer.data, status= 201)

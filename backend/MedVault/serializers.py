@@ -19,3 +19,14 @@ class RecordSerializer(serializers.ModelSerializer):
     class Meta:
         model = Record
         fields = '__all__'
+
+class NewRecordSerializer(serializers.ModelSerializer):
+    doc = serializers.DateField()
+    dr_name = serializers.CharField()
+    complaint = serializers.CharField()
+    prescription= serializers.CharField()
+    hospital_name = serializers.CharField()
+    diagnose = serializers.CharField()
+    class Meta:
+        model = Record
+        fields = ['doc', 'dr_name', 'complaint', 'diagnose', 'prescription', 'hospital_name']

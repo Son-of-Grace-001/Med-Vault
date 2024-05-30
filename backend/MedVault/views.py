@@ -220,6 +220,7 @@ class UpdateRecordView(APIView):
     serializer_class = NewRecordSerializer
     def post(self, request, id):
         user = request.user
+        name =user.fname
         patient= get_object_or_404(Patient, pk= id)
         serializer = self.serializer_class(data= request.data)
         serializer.is_valid(raise_exception = True)
